@@ -26,7 +26,7 @@ void loop() {
   distance = duration * 0.034 / 2 / 100;
 
   // Ако разстоянието е по-голямо от досегашното максимум – запомни го
-  if (distance > maxDistance && distance < 2.40) { // 400 см = макс обхват на HC-SR04
+  if (distance > maxDistance && distance < 1.90) { // 400 см = макс обхват на HC-SR04
     maxDistance = distance;
   }
 
@@ -34,5 +34,5 @@ void loop() {
   Serial.print(maxDistance);
   Serial.println("m");
 
-  delay(100); // Пауза между измерванията
+  delay(50); // Пауза между измерванията
 }
